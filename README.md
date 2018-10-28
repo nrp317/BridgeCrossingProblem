@@ -11,15 +11,15 @@ Given an array of positive distinct integer denoting the crossing time of 'n' pe
       
       Repeat the following steps until N has 2 or 3 elements left
       
-          1.  Let F1 and F2 denote the times taken by the fastest 2 persons in the set. 
-              Let the 2 fastest persons initially cross the bridge. So time taken = F2.
+          1. Let F1 and F2 denote the times taken by the fastest 2 persons in the set (F2 being higher). 
+             Let the 2 fastest persons initially cross the bridge. So time taken = F2.
               
-          2.  Let the faster one of the two return back at the other end. So time taken = F1
+          2. Let the faster one of the two return back at the other end. So time taken = F1
               
-          3. Let the 2 slowest persons amongst the ones remaining on the left hand side of the bridge, cross the bridge.
+          3. Let the 2 slowest persons, amongst the ones remaining on the left hand side of the bridge, cross the bridge.
              Let their times be S1 and S2 respectively (S2 being higher). So time taken = S2
              
-          4. Now let person with time F2 return back with the torch to left side of bridge . Time takem = F2
+          4. Now let person with time F2 return back to left side of bridge . Time takem = F2
           
           5. Add all times (T = F2 + F1 + S2 + F2) and increment minimum_time by T. minimum_time  = minimum_time + T
           
@@ -28,7 +28,7 @@ Given an array of positive distinct integer denoting the crossing time of 'n' pe
 
       if 2 elements are left 
           
-          Since only elements are left in the set N, implies only 2 persons are left on left side. 
+          Since only 2 elements are left in the set N, implies only 2 persons are left on left side. 
           Cross them with time taken = higher of the two remaining times
           
           Add this time to the minimum_time.
@@ -64,8 +64,9 @@ Assume list N of individual times taken by 'n' persons is in sorted order
 
 Let T(n) be the time taken to find the minimum time required to cross the bridge for 'n' persons 
 
-Since the algorithm in each step aims to bring the 2 remaining slowest persons on the right side
-And each step involves a summation of the times required to bring the two slowest persons on the right side
+Since the algorithm in each step does the following
+      1.    Finds the of the times required to bring the two slowest persons on the right side
+      2.    Repeats the process with N = N - 2 slowest persons
 
 Therefore
 
