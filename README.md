@@ -7,6 +7,8 @@ Given an array of positive distinct integer denoting the crossing time of 'n' pe
 
       Let N denote the initial set of distinct integers denoting the individual crossing times
       
+      Sort the list of elements in N in ascending order
+      
       Repeat the following steps until N has 2 or 3 elements left
       
           1.  Let F1 and F2 denote the times taken by the fastest 2 persons in the set. 
