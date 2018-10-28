@@ -56,3 +56,24 @@ Given an array of positive distinct integer denoting the crossing time of 'n' pe
 4.  Run the file using the command <b><i>java -ea BridgeCrossingProblem</i></b>
 
 Ensure the code runs successfully with no AssertionErrors.
+
+
+<h3> Time Complexity </h3>
+
+Assume list N of individual times taken by 'n' persons is in sorted order
+
+Let T(n) be the time taken to find the minimum time required to cross the bridge for 'n' persons 
+
+Since the algorithm in eaxh step aims to bring the 2 remaining slowest persons on the right side
+And each step involves a summation of the times required to bring the two slowest persons on the righht side
+
+Therefore
+
+T(n) = T(n-2) + k where k = constant (time required to calculate summation)
+T(n-2) = T(n-4) + k
+t(n) = T(n-4) + 2k
+...
+T(2) = T(3) = c = constant
+T(n) = T(2) + (n/2 - 1)*k
+
+So T(n) is O(n) 
