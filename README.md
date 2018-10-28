@@ -14,8 +14,7 @@ Given an array of positive distinct integer denoting the crossing time of 'n' pe
           1.  Let F1 and F2 denote the times taken by the fastest 2 persons in the set. 
               Let the 2 fastest persons initially cross the bridge. So time taken = F2.
               
-          2.  Now since torch has to be returned back, let the faster one of the two return back at the other end
-              So time taken = F1
+          2.  Let the faster one of the two return back at the other end. So time taken = F1
               
           3. Let the 2 slowest persons amongst the ones remaining on the left hand side of the bridge, cross the bridge.
              Let their times be S1 and S2 respectively (S2 being higher). So time taken = S2
