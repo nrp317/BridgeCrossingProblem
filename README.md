@@ -65,8 +65,9 @@ Assume list N of individual times taken by 'n' persons is in sorted order
 Let T(n) be the time taken to find the minimum time required to cross the bridge for 'n' persons 
 
 Since the algorithm in each step does the following
-      1.    Finds the of the times required to bring the two slowest persons on the right side
-      2.    Repeats the process with N = N - 2 slowest persons
+      
+      1.  Finds the of the times required to bring the two slowest persons on the right side
+      2.  Repeats the process with N = N - 2 slowest persons
 
 Therefore
 
